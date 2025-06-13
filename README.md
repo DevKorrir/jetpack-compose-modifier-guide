@@ -1,4 +1,4 @@
-# 🎨 Jetpack Compose Modifier Guidelines 🎨
+# Jetpack Compose Modifier Guidelines
 
 > *"The secret to beautiful UI lies not in what you add, but in the order you add it."*
 
@@ -29,6 +29,70 @@ Modifier
     .padding(10.dp)        // 📦 Middle box: 80x80dp content area  
     .background(Color.Red) // 📦 Innermost: red background on 80x80dp
 ```
+
+### 1. Layout Constrainst & Sizing
+*Define the basic dimensions and onstraints*
+
+```kotlin
+.fillMaxSize()
+.fillMaxWidth()
+.fillMaxHeight()
+.size(100.dp)
+.width(200.dp)
+.height(150.dp)
+.widthIn(min = 50.dp, max = 300.dp)
+.heightIn(min = 50.dp, max = 200.dp)
+.aspectRatio(16f/9f)
+.wrapContentSize()
+.wrapContentWidth()
+.wrapContentHeight()
+.requiredSize()
+.defaultMinSize()
+```
+
+### 2. ⚖️ Weight & Flex (for Row/Column)
+*Layout weight within parent*
+
+```kotlin
+.weight(1f)
+.weight(1f, fill = false)
+```
+
+### 3. 📍 Layout Positioning & Alignment
+*Position within parent*
+
+```kotlin
+.align(Alignment.Center)              // In Box
+.align(Alignment.CenterHorizontally)  // In Column
+.align(Alignment.CenterVertically)    // In Row
+.wrapContentSize(Alignment.TopStart)
+.offset(x = 10.dp, y = 20.dp)
+.absoluteOffset(x = 10.dp, y = 20.dp)
+```
+
+### 4. Layout Behavior Modifiers
+*How the element behaves in layout*
+
+```kotlin
+.layoutId("header")
+.onGloballyPositioned { }
+.onSizeChanged { }
+.layout { measurable, constraints -> }
+```
+
+### 5. ✂️ Clipping & Shape Definition
+*Define the shape before applying backgrounds*
+
+```kotlin
+.clip(RoundedCornerShape(8.dp))
+.clip(CircleShape)
+.clipToBounds()
+```
+
+### 6.  Border (Before Background)
+*Borders should be clipped with the shape*
+
+
 
 
 
