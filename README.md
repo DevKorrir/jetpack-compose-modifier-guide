@@ -31,7 +31,7 @@ Modifier
 ```
 
 ### 1. Layout Constrainst & Sizing
-*Define the basic dimensions and onstraints*
+*Define the basic dimensions and constraints*
 
 ```kotlin
 .fillMaxSize()
