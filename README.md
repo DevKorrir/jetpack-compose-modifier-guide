@@ -92,6 +92,74 @@ Modifier
 ### 6.  Border (Before Background)
 *Borders should be clipped with the shape*
 
+```kotlin
+.border(
+    width = 2.dp,
+    color = Color.Blue,
+    shape = RoundedCornerShape(8.dp)
+)
+```
+
+### 7. 🎨 Background & Visual Effects
+*Visual appearance within the clipped area*
+
+```kotlin
+.background(Color.Blue)
+.background(
+    color = Color.Blue,
+    shape = RoundedCornerShape(8.dp)
+)
+.shadow(
+    elevation = 4.dp,
+    shape = RoundedCornerShape(8.dp)
+)
+.drawBehind { }
+.drawWithContent { }
+```
+
+### 8. 👆 Interaction Modifiers
+*User interaction - should match visual boundaries*
+
+```kotlin
+.clickable { }
+.clickable(
+    interactionSource = remember { MutableInteractionSource() },
+    indication = rememberRipple()
+) { }
+.combinedClickable { }
+.selectable(selected = true) { }
+.toggleable(value = true) { }
+.triStateToggleable(state = ToggleableState.On) { }
+.draggable()
+.scrollable()
+.transformable()
+.pointerInput()
+.focusable()
+.hoverable()
+```
+
+### 9. 📦 Padding & Spacing
+*Internal spacing - comes after interactions*
+
+```kotlin
+.padding(16.dp)
+.padding(horizontal = 16.dp, vertical = 8.dp)
+.padding(start = 16.dp, end = 8.dp, top = 4.dp, bottom = 12.dp)
+.padding(paddingValues)
+```
+
+### 10. 📜 Scrolling Modifiers
+*Scrolling behavior*
+
+```kotlin
+.verticalScroll(rememberScrollState())
+.horizontalScroll(rememberScrollState())
+.nestedScroll(connection)
+```
+
+### 11. ♿ Semantic & Accessibility
+*Accessibility and semantics*
+
 
 
 
