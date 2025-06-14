@@ -89,7 +89,7 @@ Modifier
 .clipToBounds()
 ```
 
-### 6.  Border (Before Background)
+### 6. Border (Before Background)
 *Borders should be clipped with the shape*
 
 ```kotlin
@@ -100,7 +100,7 @@ Modifier
 )
 ```
 
-### 7. 🎨 Background & Visual Effects
+### 7. Background & Visual Effects
 *Visual appearance within the clipped area*
 
 ```kotlin
@@ -138,7 +138,7 @@ Modifier
 .hoverable()
 ```
 
-### 9. 📦 Padding & Spacing
+### 9. Padding & Spacing
 *Internal spacing - comes after interactions*
 
 ```kotlin
