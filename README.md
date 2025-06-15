@@ -160,6 +160,56 @@ Modifier
 ### 11. ♿ Semantic & Accessibility
 *Accessibility and semantics*
 
+```kotlin
+.semantics { 
+    contentDescription = "Button"
+    role = Role.Button
+}
+.semantics(mergeDescendants = true) { }
+.clearAndSetSemantics { }
+.testTag("login_button")
+```
+
+### 12. Animation & State
+*Animation and visual state changes*
+
+```kotlin
+.animateContentSize()
+.graphicsLayer {
+    alpha = 0.8f
+    rotationZ = 45f
+    scaleX = 1.2f
+    scaleY = 1.2f
+}
+.alpha(0.8f)
+.rotate(45f)
+.scale(1.2f)
+```
+
+### 13. System & Platform Integration
+*System-level behaviors*
+
+```kotlin
+.navigationBarsPadding()
+.statusBarsPadding()
+.systemBarsPadding()
+.imePadding()
+.windowInsetsPadding()
+.captionBarPadding()
+```
+
+### 14. Advanced Layout & Drawing
+*Advanced customization (usually last)*
+
+```kotlin
+.composed { }
+.drawWithCache { }
+.indication()
+.zIndex(1f)
+```
+
+## ✨ Real-World Examples
+
 
 
 
