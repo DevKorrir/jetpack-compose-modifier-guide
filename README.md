@@ -210,6 +210,46 @@ Modifier
 
 ## ✨ Real-World Examples
 
+### 🔘 Perfect Button Example
+
+```kotlin
+Button(
+    onClick = { },
+    modifier = Modifier
+        // 1. Layout Constraints
+        .fillMaxWidth()
+        .height(48.dp)
+        
+        // 2. Positioning  
+        .padding(horizontal = 16.dp) // Outer padding
+        
+        // 3. Clipping
+        .clip(RoundedCornerShape(24.dp))
+        
+        // 4. Background
+        .background(
+            brush = Brush.horizontalGradient(
+                colors = listOf(Color.Blue, Color.Cyan)
+            ),
+            shape = RoundedCornerShape(24.dp)
+        )
+        
+        // 5. Internal padding
+        .padding(vertical = 12.dp, horizontal = 24.dp)
+        
+        // 6. Animation
+        .animateContentSize()
+        
+        // 7. Semantics
+        .semantics {
+            role = Role.Button
+            contentDescription = "Submit form"
+        }
+) {
+    Text("Hello Compose")
+}
+```
+
 
 
 
