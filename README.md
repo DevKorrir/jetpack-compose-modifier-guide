@@ -250,6 +250,32 @@ Button(
 }
 ```
 
+### Card Component Example
+
+```kotlin
+Card(
+    modifier = Modifier
+        .fillMaxWidth()
+        .padding(16.dp)
+        .clip(RoundedCornerShape(12.dp))
+        .shadow(elevation = 8.dp, shape = RoundedCornerShape(12.dp))
+        .background(MaterialTheme.colorScheme.surface)
+        .clickable { /* handle click */ }
+        .padding(20.dp)
+        .semantics { contentDescription = "Product card" }
+) {
+    // Card content
+}
+```
+
+## ❌ Common Mistakes
+
+### 🚫 Wrong Order Examples
+
+
+
+
+
 
 
 
