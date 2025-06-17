@@ -272,6 +272,46 @@ Card(
 
 ### 🚫 Wrong Order Examples
 
+```kotlin
+// DON'T: Padding before background
+Modifier
+    .padding(16.dp)           // ❌ Padding won't have background
+    .background(Color.Blue)   // Background only covers content
+
+// DON'T: Clickable before clip
+Modifier
+    .clickable { }            // ❌ Clickable area extends beyond clip
+    .clip(CircleShape)        // Visual boundary doesn't match touch area
+
+// DON'T: Size after padding
+Modifier
+    .padding(16.dp)           // ❌ Adds 32.dp to total size
+    .size(100.dp)             // Size doesn't include padding
+```
+
+## ✅ Best Practices
+
+### ✨ Correct Order Examples
+
+```kotlin
+// DO: Background after clip
+Modifier
+    .clip(CircleShape)        // ✅ Define shape first
+    .background(Color.Blue)   // Background respects shape
+
+// DO: Clickable after clip  
+Modifier
+    .clip(CircleShape)        // ✅ Define visual boundary
+    .clickable { }            // Match touch area to visual
+
+// DO: Size before padding (for external padding)
+Modifier
+    .size(100.dp)             // ✅ Define base size
+    .padding(16.dp)           // Add internal spacing
+```
+
+## Memory Techniques
+
 
 
 
