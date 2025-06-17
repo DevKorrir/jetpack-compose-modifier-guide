@@ -363,7 +363,7 @@ fun Modifier.shake() = composed {
 
 When your UI doesn't look right, check these common issues:
 
-1. ** Background not showing?** → Check if padding comes before background
+1. **Background not showing?** → Check if padding comes before background
 2. **👆 Touch area too big/small?** → Verify clickable vs visual boundaries
 3. **✂️ Clipping not working?** → Ensure clip comes before background
 4. **📏 Size unexpected?** → Check if padding affects your size calculations
